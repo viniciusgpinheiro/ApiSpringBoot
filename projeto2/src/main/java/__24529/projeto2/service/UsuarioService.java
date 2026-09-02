@@ -37,14 +37,14 @@ public class UsuarioService {
         return usuarioRepository.findById(id);
     }
 
-    public void excluirUsuarioPorId(Integer id) {
-        if (possuiReserva(id)) {
-            throw new OperacaoNaoPermitidaException(
-                    "Não é permitido excluir um Usuário que " +
-                            "possui 1 ou mais reservas associadas!");
-        }
-        usuarioRepository.deleteById(id);
-    }
+    //public void excluirUsuarioPorId(Integer id) {
+        //if (possuiReserva(id)) {
+            //throw new OperacaoNaoPermitidaException(
+                    //"Não é permitido excluir um Usuário que " +
+                            //"possui 1 ou mais reservas associadas!");
+        //}
+        //usuarioRepository.deleteById(id);
+    //}
 
     public Usuario atualizarUsuario(Usuario usuario) {
         if (usuario.getId() == null) {
@@ -83,8 +83,8 @@ public class UsuarioService {
         return false;
     }
 
-    public boolean possuiReserva(Integer idUsuario) {
-        Optional<Usuario> usuario = usuarioRepository.findById(idUsuario);
-        return usuario.map(reservaRepository::existsByUsuario).orElse(false);
-    }
+    //public boolean possuiReserva(Integer idUsuario) {
+        //Optional<Usuario> usuario = usuarioRepository.findById(idUsuario);
+        //return usuario.map(reservaRepository::existsByUsuario).orElse(false);
+    //}
 }
