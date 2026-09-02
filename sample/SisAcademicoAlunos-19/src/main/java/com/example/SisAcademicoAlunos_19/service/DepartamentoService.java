@@ -4,7 +4,7 @@ import com.example.SisAcademicoAlunos_19.exceptions.OperacaoNaoPermitidaExceptio
 import com.example.SisAcademicoAlunos_19.model.Departamento;
 import com.example.SisAcademicoAlunos_19.repository.CursoRepository;
 import com.example.SisAcademicoAlunos_19.repository.DepartamentoRepository;
-import com.example.SisAcademicoAlunos_19.validator.DepartamentoValidator;
+import com.example.SisAcademicoAlunos_19.service.validator.DepartamentoValidator;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;

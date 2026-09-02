@@ -1,4 +1,4 @@
-package com.example.SisAcademicoAlunos_19.validator;
+package com.example.SisAcademicoAlunos_19.service.validator;
 
 import com.example.SisAcademicoAlunos_19.exceptions.RegistroDuplicadoException;
 import com.example.SisAcademicoAlunos_19.model.Departamento;

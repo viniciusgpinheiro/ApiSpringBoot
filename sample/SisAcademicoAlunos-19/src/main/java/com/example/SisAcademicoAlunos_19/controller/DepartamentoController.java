@@ -6,7 +6,7 @@ import com.example.SisAcademicoAlunos_19.exceptions.OperacaoNaoPermitidaExceptio
 import com.example.SisAcademicoAlunos_19.exceptions.RegistroDuplicadoException;
 import com.example.SisAcademicoAlunos_19.model.Departamento;
 import com.example.SisAcademicoAlunos_19.service.DepartamentoService;
-import com.example.SisAcademicoAlunos_19.validator.DepartamentoValidator;
+import com.example.SisAcademicoAlunos_19.service.validator.DepartamentoValidator;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,8 +16,6 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @RestController
 @RequestMapping("/departamentos")
