@@ -16,4 +16,6 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     List<Usuario> findByEmailAndDataAniversario(String email, LocalDate dataAniversario);
 
     List<Usuario> findByDataAniversario(LocalDate dataAniversario);
+
+    List<Usuario> findByNomeContainingIgnoreCase(String nome);
 }

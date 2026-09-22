@@ -56,7 +56,6 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
-    // Consulta do escopo: dados dos usuários cadastrados por e-mail e data de aniversário
     public List<Usuario> pesquisarPorEmailEDataAniversario(String email, LocalDate dataAniversario) {
         if (email != null && dataAniversario != null) {
             return usuarioRepository.findByEmailAndDataAniversario(email, dataAniversario);
@@ -73,7 +72,6 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    // Método de Login solicitado no escopo do projeto
     public boolean realizarLogin(String email, String senha) {
         Optional<Usuario> usuarioOpt = usuarioRepository.findByEmail(email).stream().findFirst();
         if (usuarioOpt.isPresent()) {
@@ -82,9 +80,4 @@ public class UsuarioService {
         }
         return false;
     }
-
-    //public boolean possuiReserva(Integer idUsuario) {
-        //Optional<Usuario> usuario = usuarioRepository.findById(idUsuario);
-        //return usuario.map(reservaRepository::existsByUsuario).orElse(false);
-    //}
 }

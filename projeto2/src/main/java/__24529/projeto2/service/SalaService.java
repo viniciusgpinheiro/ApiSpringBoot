@@ -81,7 +81,6 @@ public class SalaService {
         return resultado;
     }
 
-    // Calcula o status dinâmico do recurso: BLOQUEADO (manual) > OCUPADO (reserva ativa agora) > LIVRE
     public String calcularStatusAtual(Sala sala) {
         if (sala.getStatus() != null && "BLOQUEADO".equalsIgnoreCase(sala.getStatus().getNome())) {
             return "BLOQUEADO";

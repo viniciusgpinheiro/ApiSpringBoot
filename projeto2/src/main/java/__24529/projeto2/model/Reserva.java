@@ -15,7 +15,7 @@ import java.time.LocalTime;
 @Getter
 @Setter
 @ToString
-@Table(name = "reserva", schema = "db_reservas")
+@Table(name = "reserva")
 public class Reserva
 {
     @Id

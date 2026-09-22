@@ -27,4 +27,11 @@ public class Sala
 
     @Column
     private String localizacao;
+
+    // Status manual do recurso (usado principalmente para marcar BLOQUEADO em manutenção).
+    // Quando nulo ou diferente de BLOQUEADO, o status exibido (LIVRE/OCUPADO) é calculado
+    // dinamicamente a partir das reservas ativas do recurso.
+    @ManyToOne
+    @JoinColumn(name = "status_id")
+    private Status status;
 }

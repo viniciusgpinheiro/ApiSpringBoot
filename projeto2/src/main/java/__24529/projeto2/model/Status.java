@@ -21,4 +21,8 @@ public class Status
 
     @Column
     private String nome;
+
+    // "RECURSO" (LIVRE / OCUPADO / BLOQUEADO) ou "RESERVA" (ATIVA / CANCELADA / CONCLUIDA)
+    @Column
+    private String tipo;
 }

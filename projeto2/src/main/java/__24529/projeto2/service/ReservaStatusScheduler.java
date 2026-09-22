@@ -12,8 +12,6 @@ public class ReservaStatusScheduler {
         this.reservaService = reservaService;
     }
 
-    // Roda a cada 1 minuto: reservas ATIVAS cujo horário final + 1 minuto já passou
-    // são automaticamente alteradas para CONCLUIDA.
     @Scheduled(fixedRate = 60000)
     public void atualizarReservasVencidas() {
         reservaService.concluirReservasVencidas();

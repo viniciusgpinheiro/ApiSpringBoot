@@ -83,7 +83,6 @@ public class ReservaService {
         return reservaRepository.save(reserva);
     }
 
-    // Filtros simples e combinados: recurso (código/nome), data ou período, horário, usuário, status
     public List<Reserva> pesquisar(Integer salaCodigo, Integer laboratorioCodigo, String recursoNome,
                                     LocalDate data, LocalDate dataInicio, LocalDate dataFim,
                                     LocalTime horaInicio, LocalTime horaFim,
@@ -146,7 +145,6 @@ public class ReservaService {
         return resultado;
     }
 
-    // Job agendado: 1 minuto após o término do horário reservado, altera ATIVA -> CONCLUIDA
     public void concluirReservasVencidas() {
         LocalDateTime agora = LocalDateTime.now();
         Status statusConcluida = statusRepository.findByNomeIgnoreCaseAndTipo("CONCLUIDA", "RESERVA")
